@@ -21,6 +21,7 @@ set cursorline
 set ignorecase
 set list
 set listchars=tab:>-,trail:-
+set autochdir
 syntax on
 highlight Comment ctermfg=darkcyan
 highlight Search term=reverse ctermbg=4 ctermfg=7
