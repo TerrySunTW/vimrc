@@ -20,7 +20,7 @@ set guifontset=8x16,kc15f,-*-16-*-big5-0-
 set cursorline
 set ignorecase
 set list
-set listchars=tab:>-,trail:-
+"set listchars=tab:>-,trail:-
 syntax on
 highlight Comment ctermfg=darkcyan
 highlight Search term=reverse ctermbg=4 ctermfg=7
