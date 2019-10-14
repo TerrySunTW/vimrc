@@ -1,39 +1,65 @@
 "################### Magic vimrc ###################
 " ctrl+t : Convert tab to spaces
-" F5     : tabprevious<cr>
-" F6     : tabnext<cr>
- 
+" F3     : tabprevious<cr>
+" F4     : tabnext<cr>
 "#######################################################
-"set cindent
-set ruler
-set showmode
+
+
+"about tab 
+set showtabline=2
+set splitbelow
+set splitright
+
+"about space
+set expandtab
+set softtabstop=4
 set shiftwidth=4
 set tabstop=4
-set expandtab
-set incsearch
-set number
-set hlsearch
-set autoindent
+
+"vim setting
 set nocompatible
-set shiftwidth=4
-"set guifontset=8x16,kc15f,-*-16-*-big5-0-
+set clipboard=unnamed 
+set ruler
+set number
+set autoindent
+set wrap
+set linebreak
+set noshowmode
+set showcmd
+set scrolloff=3
 set cursorline
+set cindent
+
+"about search 
+set hlsearch 
 set ignorecase
-set list
-set listchars=tab:>-,trail:-
-set autochdir
+set incsearch
+
+"about scheme & color
 syntax on
-highlight Comment ctermfg=darkcyan
-highlight Search term=reverse ctermbg=4 ctermfg=7
-highlight CursorLine cterm=none ctermbg=0-
-set background=dark
-"if has("autocmd")
-"   autocmd BufRead *.txt set tw=78
-"   autocmd BufReadPost *
-"      \ if line("'\"") > 0 && line ("'\"") <= line("$") |
-"      \   exe "normal g'\"" |
-"      \ endif
-"endif
+
+try
+	colorscheme default
+catch
+	colorscheme default
+endtry
+
+"about filetype
+filetype on
+filetype indent on
+filetype plugin on
+
+map <F3> :tabprevious<cr>
+map <F4> :tabnext<cr>
+
+
+vmap <Tab> >>
+vmap <S-Tab> <
+imap jj <Esc>
+nmap <enter> o
+set noremap
+
+
 " Convert tab to spaces
 map <C-t> :call TabToSpaces()<CR>
 map! <C-t> <Esc>:call TabToSpaces()<CR>
@@ -42,9 +68,10 @@ function TabToSpaces()
     echo "Convert tab to spaces."
 endfunction
 
-map <F5> :tabprevious<cr>
-map <F6> :tabnext<cr>
-"imap <C-F11> <C-R>=strftime("%x %H:%M:%S")<BAR><CR>. Owen.<ESC> <C-R>
-"let b:match_words='\<ifeq\>\|\<ifneq\>:\<else\>:\<endif\>'
-"execute pathogen#infect()
-"filetype plugin indent on
+
+" autocmd 
+if executable("ruby")
+	autocmd BufRead, BufNewFile *.rb noremap <F5> :% w !ruby -w<Enter>
+else
+	autocmd BufRead, BufNewFile *.rb noremap <F5> :echo "you need to install Ruby first!"
+endif 
