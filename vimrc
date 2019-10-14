@@ -74,10 +74,13 @@ filetype on
 filetype indent on
 filetype plugin on
 
+"ctags bug setting
+set tags=tags;
 
 map <F3> :tabprevious<cr>
 map <F4> :tabnext<cr>
 nmap <F5> :NERDTreeToggle<CR>
+"Ctrl + ] to function , Ctrl + t back to position
 map <F6> :TagbarToggle<CR>
 
 vmap <Tab> >>
