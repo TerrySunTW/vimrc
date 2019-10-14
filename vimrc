@@ -4,6 +4,31 @@
 " F4     : tabnext<cr>
 "#######################################################
 
+"vim plug :! PlugInstall
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+call plug#begin('~/.vim/plugged')
+"theme
+Plug 'dracula/vim',{ 'as': 'dracula' }
+"tools
+Plug 'vim-airline/vim-airline'
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'mattn/emmet-vim'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'garbas/vim-snipmate'
+Plug 'honza/vim-snippets'
+Plug 'majutsushi/tagbar'
+Plug 'valloric/youcompleteme'
+Plug 'mileszs/ack.vim'
+call plug#end()
 
 "about tab 
 set showtabline=2
@@ -49,15 +74,17 @@ filetype on
 filetype indent on
 filetype plugin on
 
+
 map <F3> :tabprevious<cr>
 map <F4> :tabnext<cr>
-
+nmap <F5> :NERDTreeToggle<CR>
+map <F6> :TagbarToggle<CR>
 
 vmap <Tab> >>
 vmap <S-Tab> <
-imap jj <Esc>
+imap qq <Esc>
 nmap <enter> o
-set noremap
+
 
 
 " Convert tab to spaces
