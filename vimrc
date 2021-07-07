@@ -29,6 +29,7 @@ Plug 'majutsushi/tagbar'
 Plug 'valloric/youcompleteme'
 Plug 'mileszs/ack.vim'
 call plug#end()
+colorscheme dracula
 
 "about tab 
 set showtabline=2
@@ -82,6 +83,9 @@ map <F4> :tabnext<cr>
 nmap <F5> :NERDTreeToggle<CR>
 "Ctrl + ] to function , Ctrl + t back to position
 map <F6> :TagbarToggle<CR>
+
+"Clear last search highlighting
+map <Space> :noh<cr>
 
 vmap <Tab> >>
 vmap <S-Tab> <
