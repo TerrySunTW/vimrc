@@ -38,6 +38,7 @@ colorscheme dracula
 
 "about tab 
 set showtabline=2
+set backspace=2
 set splitbelow
 set splitright
 
