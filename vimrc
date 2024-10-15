@@ -15,7 +15,7 @@ endif
 
 call plug#begin('~/.vim/plugged')
 "theme
-Plug 'dracula/vim',{ 'as': 'dracula' }
+Plug 'dracula/vim', { 'as': 'dracula' }
 "tools
 Plug 'vim-airline/vim-airline'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
@@ -30,7 +30,7 @@ Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
 Plug 'majutsushi/tagbar'
 Plug 'airblade/vim-gitgutter'
-Plug 'valloric/youcompleteme'
+"Plug 'valloric/youcompleteme'
 Plug 'mileszs/ack.vim'
 Plug 'vim-scripts/bash-support.vim'
 call plug#end()
@@ -68,6 +68,8 @@ set smartcase
 
 "about scheme & color
 syntax on
+"syntax
+au BufNewFile,BufRead *.[Jj]enkinsfile set syntax=groovy
 
 try
 	"colorscheme default
