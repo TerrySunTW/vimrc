@@ -1,7 +1,7 @@
 # vimrc
 vimrc
 
-cp vim ~/.vim
+cp vimrc ~/.vimrc
 
 cp -r .vim ~/
 

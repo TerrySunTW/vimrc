@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =9
+let g:netrw_dirhist_9='/etc/containerd'
+let g:netrw_dirhist_8='/home/terry_sun/1T/gerrit_repo/my-library-user-console/app/node_modules/eslint'
+let g:netrw_dirhist_7='/home/terry_sun/1T/gerrit_repo/RepoBuildScript/CodeQL/common'
+let g:netrw_dirhist_6='/home/terry_sun/1T/gerrit_repo/jenkinsfile'
+let g:netrw_dirhist_5='/home/terry_sun/1T/gerrit_repo/Calibration/VPTool'
+let g:netrw_dirhist_4='/home/terry_sun/1T/gerrit_repo/Fortify'
+let g:netrw_dirhist_3='/home/terry_sun/1T/gerrit_repo/Fortify/scripts'
+let g:netrw_dirhist_2='/home/terry_sun/1T/gerrit_repo/Fortify'
+let g:netrw_dirhist_1='/home/terry_sun/1T/manifest_test/manifest1/.git'
+let g:netrw_dirhist_0='/home/terry_sun/1T/manifest_test/manifest1'
